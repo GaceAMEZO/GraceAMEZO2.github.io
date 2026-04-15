@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site E-commerce(FreshMarket)</title>
+    <link rel="stylesheet" href="fichier.css">
+</head>
+<body>
+    <div class="header-bienvenue">
+        <h1>Bienvenue chez FreshMarket</h1>
+        <h2 class="slogan">"La fraîcheur de la ferme, directement dans votre panier."</h2>
+    </div>
+
+    <div class="tout">
+        <h1>Nos meilleures produits</h1>
+        <div id="produits">
+            <!-- Les produits s'affichent ici -->
+        </div>
+    </div>
+
+    <div id="panier-icone" onclick="togglePanier()">
+        🛒 <span id="compteur">0</span>
+    </div>
+
+        <!-- La fenêtre latérale unique -->
+    <div id="panier-contenu" class="cache">
+        <h3>Votre Panier</h3>
+        <div id="liste-articles">
+            <p>Le panier est vide</p>
+        </div>
+        <div id="total-panier">
+            <strong>Total : </strong><span id="total">0</span> FCFA
+        </div>
+        <br>
+        <button onclick="togglePanier()">Fermer</button>
+    </div>
+    <footer class="infos">
+
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

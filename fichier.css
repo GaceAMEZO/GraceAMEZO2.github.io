@@ -1,0 +1,173 @@
+
+body {
+    background: url("vert.jpg") no-repeat center/cover fixed;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h2 {    
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Une police plus moderne */
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 40px auto;
+    background: linear-gradient(to right, rgb(1, 51, 1), #105557); /* Dégradé qui rappelle vos boutons */
+    -webkit-background-clip: text; /* Le dégradé s'applique au texte */
+    -webkit-text-fill-color: transparent; /* Rend l'intérieur du texte transparent pour voir le dégradé */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h2 { width: 200px; border-radius: 25px; }
+
+/* --- Conteneurs Flexbox --- */
+#produits, #panier {
+    display: flex;
+    justify-content: center; /* Centré pour un plus joli rendu */
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les cartes */
+}
+
+/* --- Cartes Produit & Panier (Regroupées) --- */
+.produit, .panier {
+    padding: 20px;
+    
+    border-radius: 25px;
+    background-color: #f8f9fa;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.produit:hover, .panier:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa;;
+    border-color: #00ccff;
+}
+
+/* --- Éléments Internes --- */
+img {
+    width: 100%; /* S'adapte à la largeur de la carte */
+    max-width: 250px;
+    border-radius: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color:  rgb(5, 77, 5);
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #105557; }
+
+/* --- Système de Panier Fixe --- */
+#panier-icone {
+    position: fixed;
+    top: 20px; left: 20px;
+    background: rgb(5, 77, 5);
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#panier-contenu {
+    position: fixed;
+    top: 85px; left: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    z-index: 999;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.cache { display: none; }
+
+/* --- Utilitaires --- */
+.tout {
+    text-align: center;
+    padding: 40px;
+    margin: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent pour voir le fond vert */
+}
+#total-panier {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #00ccff;
+    font-size: 1.1rem;
+    color: #105557;
+    font-weight: bold;
+}
+
+#liste-articles {
+    max-height: 400px; /* Ajoute une barre de défilement si trop de produits */
+    overflow-y: auto;
+}
+.produit {
+    /* ... vos styles existants (padding, border, etc.) ... */
+    
+    background-color: white;
+    /* Syntaxe : horizontal | vertical | flou | étalement | couleur */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    
+    transition: box-shadow 0.3s ease; /* Pour une transition fluide au survol */
+}
+
+/* Optionnel : Intensifier l'ombre quand on survole le produit */
+.produit:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+.header-bienvenue {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.header-bienvenue h2 {
+    color: #065658; /* Un vert très foncé */
+    background: none; /* On enlève le fond noir pour le message de bienvenue */
+    border: none;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    width: 100%; /* Pour qu'il prenne toute la largeur */
+}
+
+.slogan {
+    font-style: italic;
+    color: #333;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Optionnel : petites lignes décoratives autour du slogan */
+.slogan::before, .slogan::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: #00ccff;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+.infos{
+    background-color:aliceblue;
+}
